@@ -89,7 +89,7 @@ input{
     position: relative;
 }
 .password-input-wrapper::after{
-    content: url("./images/hide_password_icon.svg");
+    content: url("../images/hide_password_icon.svg");
     position: absolute;
     display: inline;
     width: 20px;
@@ -131,13 +131,13 @@ input{
     cursor: pointer;
 }
 #continue-with-facebook-button::before{
-    content: url("images/facebook_icon.svg");
+    content: url("../images/facebook_icon.svg");
     width: 20px;
     height: 20px;
     margin-right: 4px;
 }
 #continue-with-google-button::before{
-    content: url("images/google_icon.svg");
+    content: url("../images/google_icon.svg");
     width: 20px;
     height: 20px;
     margin-right: 9px;
