@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://api.fontshare.com/v2/css?f=satoshi@300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Registration</title>
+    <title>Greenshop</title>
 </head>
 <body>
-    <div class="modal-window-container">
-        <div class="close-button-wrapper">
-            <button class="modal-close-button"><img src="./images/cross_icon.svg" alt=""></button>
-        </div>
-        <div class="modal-content-wrapper">
-            <div class="registration-button-wrapper">
-                <button class="registration_button">Login</button>
-                <span class="divider">|</span>
-                <button class="registration_button focused">Register</button>
-            </div>
-            <p class="label-text">Enter your email and password to register.</p>
-            <form>
-                <input type="text" placeholder="Username">
-                <input type="email" placeholder="Enter your email address">
-                <div class="password-input-wrapper">
-                    <input type="password" placeholder="Password" id="password-input">
-                </div>
-                <input type="password" placeholder="Confirm Password">
-
-                <button id="register-button" type="submit">Register</button>
-            </form>
-            <div class="another-registration-actions-container">
-                <p class="another-registration-actions-divider">Or register with</p>
-                <button id="continue-with-google-button" class="continue-with-button">Continue with Google</button>
-                <button id="continue-with-facebook-button" class="continue-with-button">Continue with Facebook</button>
-            </div>
-        </div>
-        <div class="modal-footer-line"></div>
-    </div>
+    <div class="container">
+        <header>
+            <img src="./images/greenforest_logo_icon.svg" alt="greenforest-icon" class="logo-icon">
+            <nav>
+                <a href="" class="nav-link active">Home</a>
+                <a href="" class="nav-link">Shop</a>
+                <a href="" class="nav-link">Plant Care</a>
+                <a href="" class="nav-link">Blogs</a>
+            </nav>
+            <button id="header-login-button" class="green-button"><img src="./images/login_icon.svg" alt="" class="login-icon">Login</button>
+        </header>
+    </div>    
 </body>
 </html>
