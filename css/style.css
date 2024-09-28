@@ -45,9 +45,6 @@ header{
     font-size: 0;
     width: 100%;
     margin-top: 30px;
-
-    /* background: #acabab; */
-
     border-bottom: 1px solid rgba(70, 163, 88, 0.2);
 }
 
@@ -93,7 +90,7 @@ nav a:last-child{
     margin-right: 6px;
 }
 
-section{
+main{
     margin-top: 12px;
     padding-left: 43px;
     background: rgba(245, 245, 245, 0.5);
@@ -154,8 +151,169 @@ section{
     width: 100%;
 }
 
+/* -- STYLES FOR SHOP SECTION -- */
 
-/* -- STYLES FOR REGISTRATION -- */
+.shop-section{
+    font-size: 0;
+    margin-top: 5%;
+}
+
+.shop-section ul{
+    list-style-type: none;
+}
+
+.shop-section aside{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 310px;
+    background: #FBFBFB;
+}
+
+.shop-section section{
+    display: inline-block;
+    max-width: 840px;
+    margin-left: 50px;
+}
+
+.shop-section aside img{
+    display: block;
+    width: 100%;
+}
+
+aside h2{
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+
+aside ul{
+    margin-bottom: 134%;
+}
+aside ul li{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+aside .active-cat{
+    font-weight: 700;
+    color: #46A358;
+}
+
+.sort-panel{
+    margin-bottom: 23px;
+}
+
+.sort-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 15px;
+    line-height: 16px;
+    padding-bottom: 7px;
+}
+
+.sort-button:last-child{
+    margin-right: 0;
+}
+
+.sort-panel .active-sort{
+    font-weight: 700;
+    color: #46A358;
+    border-bottom: 2px solid #46A358;
+}
+
+.sort-panel p{
+    display: inline-block;
+    font-size: 15px;
+    line-height: 16px;
+    margin-left: 337px;
+    margin-right: 8px;
+}
+
+.sort-panel button img{
+    vertical-align: middle;
+}
+
+/* -- STYLES FOR SHOP CARDS -- */
+
+.cards-wrapper{
+    font-size: 0;
+}
+.card{
+    display: inline-block;
+    margin-bottom: 70px;
+    margin-right: 33px;
+}
+.card:nth-child(3n){
+    margin-right: 0;
+}
+.card:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+.card-img{
+    width: 258px;
+    height: 300px;
+}
+.card-img img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+.card-details{
+    margin-top: 12px;
+    line-height: 16px;
+}
+.card-details .name{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+.card-details .price{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* -- STYLES FOR PAGINATION -- */
+
+.pagination{
+    float: right;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+.pagination ul{
+    font-size: 0;
+}
+.pagination li{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 16px;
+    padding: 9px 13px 10px 12px;
+    margin-right: 10px;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pagination li:last-child{
+    margin-right: 0;
+}
+.pagination .active-pag{
+    font-weight: 700;
+    color: #FFFFFF;
+    background: #46A358;
+    border-color: #46A358;
+}
+
+
+/* -- STYLES FOR REGISTRATION PAGE -- */
+
 .modal-window-container{
     width: 500px;
     margin: 0 auto;
