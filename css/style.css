@@ -24,6 +24,9 @@
     font-family: "Cera-pro-reg";
 }
 
+button{
+    cursor: pointer;
+}
 .green-button{
     background: #46A358;
     color: #FFFFFF;
@@ -41,22 +44,25 @@
     margin: 0 auto;
 }
 
+/* -- HEADER -- */
+
 header{
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    height: 53px;
     margin-top: 30px;
     border-bottom: 1px solid rgba(70, 163, 88, 0.2);
 }
-
 header nav{
-    display: inline-block;
-    margin: 8px 369px 0 229px;
-    font-size: 0px;
+    width: 29.25%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
 }
 nav a{
-    display: inline-block;
-    margin-right: 50px;
-    padding-bottom: 25px;
+    flex-shrink: 0;
+    display: block;
     font-size: 16px;
     text-decoration: none;
     color: #3D3D3D;
@@ -76,8 +82,6 @@ nav a:last-child{
 }
 
 #header-login-button{
-    display: inline-block;
-    vertical-align: top;
     font-size: 16px;
     line-height: 20px;
     padding: 9px 18px;
@@ -90,7 +94,11 @@ nav a:last-child{
     margin-right: 6px;
 }
 
+/* -- HERO -- */
+
 main{
+    display: flex;
+    justify-content: space-between;
     margin-top: 12px;
     padding-left: 43px;
     background: rgba(245, 245, 245, 0.5);
@@ -98,8 +106,7 @@ main{
 }
 
 .left-side-section{
-    display: inline-block;
-    max-width: 650px;
+    max-width: 47%;
     vertical-align: top;
     margin-top: 68px;
 }
@@ -112,19 +119,17 @@ main{
     margin-bottom: 8px;
 }
 
-.left-side-section h2{
-    color: #3D3D3D;
-    font-family: "Cera-pro-black";
-    font-size: 70px;
-    line-height: 70px;
-    text-transform: uppercase;
-}
-
-.left-side-section h2 span{
+.left-side-section h2, 
+.left-side-section h2 span {
     display: inline-block;
     font-size: 70px;
     line-height: 70px;
+    text-transform: uppercase;
     font-family: "Cera-pro-black";
+}
+
+.left-side-section h2{
+    color: #3D3D3D;
 }
 
 .left-side-section p{
@@ -144,8 +149,7 @@ main{
 }
 
 .right-side-section{
-    display: inline-block;
-    max-width: 507px;
+    max-width: 44%;
 }
 .right-side-section img{
     width: 100%;
@@ -154,8 +158,11 @@ main{
 /* -- STYLES FOR SHOP SECTION -- */
 
 .shop-section{
-    font-size: 0;
-    margin-top: 5%;
+    margin-top: 46px;
+}
+.shop-section__wrapper{
+    display: flex;
+    justify-content: space-between;
 }
 
 .shop-section ul{
@@ -163,22 +170,18 @@ main{
 }
 
 .shop-section aside{
-    display: inline-block;
-    vertical-align: top;
-    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 28%;
     background: #FBFBFB;
 }
 
-.shop-section section{
-    display: inline-block;
-    max-width: 840px;
-    margin-left: 50px;
+.shop-section .shop-section__right-side{
+    max-width: 70%;
 }
 
-.shop-section aside img{
-    display: block;
-    width: 100%;
-}
+/* -- ASIDE -- */
 
 aside h2{
     font-size: 18px;
@@ -188,10 +191,6 @@ aside h2{
     margin-left: 18px;
     margin-bottom: 20px;
 }
-
-aside ul{
-    margin-bottom: 134%;
-}
 aside ul li{
     margin-left: 30px;
     margin-bottom: 20px;
@@ -199,71 +198,70 @@ aside ul li{
     line-height: 16px;
     cursor: pointer;
 }
-
 aside .active-cat{
-    font-weight: 700;
+    font-family: "Cera-pro-bold";
     color: #46A358;
 }
-
+.shop-section aside img{
+    display: block;
+    width: 100%;
+}
 .sort-panel{
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 23px;
 }
-
+.sort-panel nav{
+    display: flex;
+    column-gap: 40px;
+}
+.sort-panel .sort-panel__sort-wrapper{
+    display: flex;
+    align-items: center;
+}
 .sort-button{
+    display: block;
     background: none;
     border: none;
-    cursor: pointer;
-    margin-right: 40px;
     font-size: 15px;
     line-height: 16px;
-    padding-bottom: 7px;
 }
-
 .sort-button:last-child{
     margin-right: 0;
 }
-
 .sort-panel .active-sort{
     font-weight: 700;
     color: #46A358;
     border-bottom: 2px solid #46A358;
 }
-
 .sort-panel p{
-    display: inline-block;
     font-size: 15px;
     line-height: 16px;
-    margin-left: 337px;
     margin-right: 8px;
 }
-
 .sort-panel button img{
     vertical-align: middle;
 }
 
 /* -- STYLES FOR SHOP CARDS -- */
 
-.cards-wrapper{
-    font-size: 0;
+.shop-cards-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 70px;
 }
 .card{
-    display: inline-block;
-    margin-bottom: 70px;
-    margin-right: 33px;
-}
-.card:nth-child(3n){
-    margin-right: 0;
-}
-.card:nth-last-child(-n+3){
-    margin-bottom: 0;
+    width: calc(33.333% - 30px);
 }
 .card-img{
-    width: 258px;
-    height: 300px;
+    max-height: 300px;
 }
 .card-img img{
     display: block;
     margin: 0 auto;
+    max-width: 100%;
     height: 100%;
 }
 .card-details{
@@ -282,23 +280,27 @@ aside .active-cat{
 /* -- STYLES FOR PAGINATION -- */
 
 .pagination{
-    float: right;
+    display: flex;
+    justify-content: end;
     margin-top: 90px;
     margin-bottom: 60px;
 }
 .pagination ul{
-    font-size: 0;
+    display: flex;
 }
 .pagination li{
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 36px;
     height: 36px;
     font-size: 18px;
     line-height: 16px;
-    padding: 9px 13px 10px 12px;
     margin-right: 10px;
+
     border: 1px solid #E5E5E5;
     border-radius: 4px;
+
     cursor: pointer;
 }
 .pagination li:last-child{
@@ -311,11 +313,161 @@ aside .active-cat{
     border-color: #46A358;
 }
 
+/* -- INFO-BLOG SECTION -- */
+
+.information-section{
+    margin: 138px 0 100px 0;
+}
+
+.information-section .info-cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.information-section .info-card{
+    position: relative;
+    min-width: 48.834%;
+    min-height: 250px;
+    padding-top: 3%;
+    padding-bottom: 3.667%;
+    padding-right: 2.5%;
+    background: #FBFBFB;
+}
+.information-section .info-card .img-wrapper{
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    max-width: 48.977%;
+    max-height: 292px;
+}
+.information-section .info-card img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.information-section .info-card .descrtiption{
+    max-width: 52.52%;
+    margin-left: auto;
+}
+.info-card .title{
+    max-width: 150px;
+    margin-left: auto;
+
+    font-family: "Cera-pro-black";
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #3D3D3D;
+}
+.info-card .text{
+    text-align: right;
+    font-size: 14px;
+    line-height: 24px;
+    color: #727272;
+    margin-top: 8px;
+}
+.information-section .info-card button{
+    display: block;
+    margin-left: auto;
+    margin-top: 24px;
+    padding: 11px 28px;
+}
+
+.information-section .info-card button::after{
+    content: url(/images/icon-arrow-right-white.svg);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+/* -- BLOG POSTS SECTION -- */
+
+.blog-posts-section{
+    margin-top: 138px;
+}
+.blog-posts-section .blog-posts-section__title{
+    font-family: "Cera-pro-bold";
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+.blog-posts-section .blog-posts-section__subtitle{
+    text-align: center;
+    color: #727272;
+    line-height: 24px;
+}
+.blog-posts-section .blog-posts-section__card-wrapper{
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-posts-section__card-wrapper .blog-card{
+    max-width: 22.334%;
+    background: #FBFBFB;
+}
+.blog-card .blog-img-wrapper{
+    max-height: 196px;
+}
+.blog-card .blog-img-wrapper img{
+    max-width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.blog-posts-section__card-wrapper .blog-card .blog-card-description{
+    padding: 15px 0 15px 15px;
+}
+.blog-card-description .blog-card-descritpion__date-info-text{
+    font-family: "Cera-pro-med";
+    line-height: 16px;
+}
+.blog-card-description .blog-card-descritpion__title{
+    font-family: "Cera-pro-black";
+    font-size: 20px;
+    line-height: 26px;
+    color: #3D3D3D;
+
+    max-width: 81%;
+    margin: 4px 0;
+
+    cursor: pointer;
+}
+
+.blog-card-description .blog-card-descritpion__text{
+    line-height: 22px;
+    color: #727272;
+
+    max-width: 95.656%;
+
+    cursor: pointer;
+}
+
+.blog-card-description .blog-card-descritpion__button{
+    font-family: "Cera-pro-med";
+    margin-top: 9px;
+    border: none;
+    background: none;
+    color: #3D3D3D;
+    line-height: 16px;
+}
+
+.blog-card-description button.active{
+    color: #46A358;
+}
+
+.blog-card-description .blog-card-descritpion__button img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
 
 /* -- STYLES FOR REGISTRATION PAGE -- */
 
 .modal-window-container{
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     background: #FFFFFF;
 }
@@ -343,6 +495,7 @@ aside .active-cat{
     margin: 0 auto;
 }
 .registration_button{
+    font-family: "Cera-pro-med";
     display: block;
     background: none;
     border: none;
@@ -369,7 +522,13 @@ aside .active-cat{
     align-self: start;
 }
 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-top: 14px;
+}
+.another-registration-actions-container{
+    width: 100%;
 }
 .another-registration-actions-divider{
     display: flex;
@@ -380,7 +539,7 @@ form{
 .another-registration-actions-divider::before,
 .another-registration-actions-divider::after{
     content: "";
-    width: 92px;
+    width: 30.67%;
     border-bottom: 1px solid #EAEAEA;
 
 }
@@ -391,8 +550,8 @@ form{
     margin-left: 7px;
 }
 input{
+    width: 100%;
     display: block;
-    width: 300px;
     border: 1px solid #EAEAEA;
     border-radius: 4px;
     padding: 12px 0px 12px 14px;
@@ -411,6 +570,7 @@ input{
     right: 13px;
 }
 #register-button{
+    font-family: "Cera-pro-bold";
     display: block;
 
     font-size: 16px;
@@ -418,16 +578,17 @@ input{
     
     font-weight: 700;
 
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 41px;
     padding: 16px 0;
 }
 .continue-with-button{
+    font-family: "Cera-pro-med";
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 100%;
     padding-top: 13px;
     padding-bottom: 13px;
     margin-top: 15px;
@@ -435,6 +596,7 @@ input{
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 4px;
+    color: #727272;
 
     cursor: pointer;
 }
