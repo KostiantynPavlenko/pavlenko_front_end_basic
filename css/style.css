@@ -72,21 +72,20 @@ nav a:hover{
     font-weight: 700;
     border-bottom: 3px solid #46A358;
 }
-nav a:hover .nav__dropdown-menu-wrapper{
+
+/* -- STYLES FOR DROPDOWN MENU -- */
+nav a:hover .nav__dropdown-menu{
     visibility: visible;
-}
-.nav__dropdown-menu-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    min-height: 180px;
-    visibility: hidden;
-    position: absolute;
-    top : 12px;
-    transform:translateX(-60px);
+    opacity: 1;
 }
 .nav__dropdown-menu{
     width: 188px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top : 12px;
+    transform:translateX(-60px) translateY(44px);
+    transition: 0.5s ease-in-out;
     list-style-type: none;
     background: #EDF6EE;
 }
@@ -116,21 +115,22 @@ nav a:hover .nav__dropdown-menu-wrapper{
     content: url("../images/header/icon_dropdown_menu_arrow_left.svg");
     margin-right: 17px;
 }
-.inner-dropdown-menu-wrapper{
+.nav__dropdown-menu .inner-dropdown-menu{
+    visibility: hidden;
+    opacity: 0;
     min-width: 180px;
+    color: #3D3D3D;
+    background: #EDF6EE;
+    margin-left: 2px;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateX(188px) translateY(-43%);
-}
-.nav__dropdown-menu .inner-dropdown-menu{
-    visibility: hidden;
-    color: #3D3D3D;
-    background: #EDF6EE;
-    margin-left: 2px;
+    transition: 0.5s ease-in-out;
 }
 .nav__dropdown-menu .item-with-dropdown:hover .inner-dropdown-menu{
     visibility: visible;
+    opacity: 1;
 }
 nav a:last-child{
     margin-right: 0px;
