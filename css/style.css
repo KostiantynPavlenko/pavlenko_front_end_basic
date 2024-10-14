@@ -603,6 +603,218 @@ aside .active-cat{
     margin-left: 5px;
 }
 
+/* -- STYLES FOR FOOTER -- */
+
+footer h2{
+    font-family: "Cera-pro-bold";
+    color: #3D3D3D;
+    font-size: 18px;
+    line-height: 16px;
+}
+
+/* -- FOOTER NEWSLETTER SECTION -- */
+
+.footer-newsletter{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 25px;
+    background: #FBFBFB;
+}
+
+.footer-newsletter__card-wrapper{
+    display: flex;
+    column-gap: 30px;
+}
+
+.footer-newsletter__card-wrapper .horizontal-divider{
+    width: 1px;
+    height: 187px;
+    background: #46A3581A;
+}
+
+.footer-newsletter__information__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 204px;
+}
+.footer-newsletter__information__card h2{
+    font-size: 17px;
+    margin: 15px 0 9px 0;
+}
+.footer-newsletter__information__card p{
+    line-height: 22px;
+    color: #727272;
+}
+.bg-image-container{
+    height: 90px;
+}
+
+.footer-newsletter__card-wrapper .bg-card-img{
+    max-width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.footer-newsletter__card-wrapper .card-1 .bg-card-img{
+    background-image: url(../images/footer/footer-newsletter-img-1.svg);
+}
+.footer-newsletter__card-wrapper .card-2 .bg-card-img{
+    background-image: url(../images/footer/footer-newsletter-img-2.svg);
+}
+.footer-newsletter__card-wrapper .card-3 .bg-card-img{
+    
+    background-image: url(../images/footer/footer-newsletter-img-3.svg);
+}
+
+.footer-newsletter__form-block{
+    max-width: 30.78%;
+}
+
+.footer-newsletter__form-block h2{
+    
+    font-size: 18px;
+    line-height: 16px;
+
+    margin-top: 13px;
+    margin-bottom: 25px;
+}
+
+.footer-newsletter__form-block p{
+    font-size: 13px;
+    line-height: 22px;
+    color: #727272;
+
+    margin-top: 18px;
+}
+
+.footer-newsletter__form-block form{
+    display: flex;
+}
+
+.footer-newsletter__form-block form input{
+    padding: 11px 0 12px 12px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.footer-newsletter__form-block form input:focus{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.footer-newsletter__form-block form input::placeholder{
+    color: #ACACAC;
+}
+
+.footer-newsletter__form-block form button{
+    font-family: "Cera-pro-bold";
+    font-size: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 12px 25px;
+}
+
+/* -- FOOTER CONTACTS SECTION -- */
+
+.footer-contacts{
+    display: flex;
+    padding: 0 23px;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    background: linear-gradient(to right, #EDF6EF, #52C368);
+}
+
+.footer-contacts .footer-contacts__item{
+    max-width: 205px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.footer-contacts .footer-contacts__item img{
+    width: 20px;
+    height: 20px;
+}
+.footer-contacts .footer-contacts__item a{
+    color: #3D3D3D;
+    text-decoration: none;
+    line-height: 22px;
+}
+
+/* -- FOOTER DETAILS SECTION -- */
+
+.footer-details{
+    display: flex;
+    padding: 33px 25px 27px 25px;
+    background: #FBFBFB;
+    border-bottom: 1px solid #46A35833;
+}
+
+.footer-details__navigation{
+    display: flex;
+}
+
+.footer-details__navigation .account-nav{
+    margin-right: 164px;
+}
+.footer-details__navigation .help-guide-nav{
+    margin-right: 129px;
+}
+
+.footer-details__navigation h2{
+    margin-bottom: 12px;
+}
+
+.footer-details__navigation ul{
+    list-style: none;
+}
+
+.footer-details__navigation ul li{
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.footer-details__navigation ul li:last-child{
+    margin-bottom: 0;
+}
+.footer-details__social-and-payments-container{
+    margin: 0 auto;
+}
+.footer-details__social-media h2{
+    margin-bottom: 20px;
+}
+.footer-details__payments-methods{
+    margin-top: 33px;
+}
+.footer-details__payments-methods h2{
+    margin-bottom: 13px;
+}
+.footer-details__social-media .media-icon-container{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #46A35833;
+    border-radius: 4px;
+}
+.footer-details__social-media .media-icon-container img{
+    max-width: 18px;
+    height: 16px;
+}
+.footer-details__social-media__icons{
+    display: flex;
+    column-gap: 10px;
+}
+
+footer .copyright-text{
+    margin: 8px 0 22px 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+
 /* -- STYLES FOR REGISTRATION PAGE -- */
 
 .modal-window-container{
@@ -660,7 +872,7 @@ aside .active-cat{
     line-height: 16px;
     align-self: start;
 }
-form{
+.registration-form{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -688,7 +900,7 @@ form{
 .another-registration-actions-divider::after{
     margin-left: 7px;
 }
-input{
+.registration-form input{
     width: 100%;
     display: block;
     border: 1px solid #EAEAEA;
