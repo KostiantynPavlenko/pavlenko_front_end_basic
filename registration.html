@@ -10,7 +10,11 @@
 <body>
     <div class="modal-window-container">
         <div class="close-button-wrapper">
-            <button class="modal-close-button"><img src="./images/cross_icon.svg" alt=""></button>
+            <button class="modal-close-button">
+                <svg class="cross-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="./images/sprite.svg#cross-icon"></use>
+                </svg>
+            </button>
         </div>
         <div class="modal-content-wrapper">
             <div class="registration-button-wrapper">
@@ -24,6 +28,9 @@
                 <input type="email" placeholder="Enter your email address">
                 <div class="password-input-wrapper">
                     <input type="password" placeholder="Password" id="password-input">
+                    <svg class="icon-hide-passsword" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/sprite.svg#icon-hide-password"></use>
+                    </svg>
                 </div>
                 <input type="password" placeholder="Confirm Password">
 
@@ -31,8 +38,16 @@
             </form>
             <div class="another-registration-actions-container">
                 <p class="another-registration-actions-divider">Or register with</p>
-                <button id="continue-with-google-button" class="continue-with-button">Continue with Google</button>
-                <button id="continue-with-facebook-button" class="continue-with-button">Continue with Facebook</button>
+                <button id="continue-with-google-button" class="continue-with-button">
+                    <svg class="icon-register-with" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/sprite.svg#icon-register-with-google"></use>
+                    </svg>Continue with Google
+                </button>
+                <button id="continue-with-facebook-button" class="continue-with-button">
+                    <svg class="icon-register-with" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/sprite.svg#icon-register-with-facebook"></use>
+                    </svg>Continue with Facebook
+                </button>
             </div>
         </div>
         <div class="modal-footer-line"></div>

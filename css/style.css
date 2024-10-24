@@ -123,6 +123,7 @@ nav a:hover{
 }
 
 /* -- STYLES FOR DROPDOWN MENU -- */
+
 nav a:hover .nav__dropdown-menu{
     visibility: visible;
     opacity: 1;
@@ -218,7 +219,7 @@ main{
     justify-content: space-between;
     margin-top: 12px;
     padding-left: 43px;
-    background: rgba(245, 245, 245, 0.5);
+    background: linear-gradient(to right bottom, #F5F5F580 50%, #F5F5F580 50%);
     font-size: 0;
 }
 
@@ -281,13 +282,9 @@ main{
     display: flex;
     justify-content: space-between;
 }
-
 .shop-section ul{
     list-style-type: none;
 }
-
-
-
 .shop-section .shop-section__right-side{
     max-width: 70%;
 }
@@ -421,16 +418,13 @@ aside ul li:hover span{
     font-weight: 700;
     color: var(--primary-green-color);
 }
-.sort-panel nav .sort-button:hover{
+.sort-panel nav .sort-button:hover,
+.sort-panel__sort-wrapper .sort-button:hover {
     font-weight: 700;
     color: var(--primary-hover-gray-color);
 }
 .sort-panel nav .active-sort:hover{
     color: var(--primary-green-color);
-}
-.sort-panel__sort-wrapper .sort-button:hover{
-    font-weight: 700;
-    color: var(--primary-hover-gray-color);
 }
 .sort-panel p{
     font-size: 15px;
@@ -1063,14 +1057,21 @@ footer .copyright-text{
     font-size: 20px;
     font-weight: 500;
     padding: 0;
+    color: var(--primary-gray-color);
+}
+.registration_button:hover{
+    color: #727272;
+}
+.registration_button.focused:hover{
+    color: var(--primary-green-color);
 }
 .divider{
-    color: #3D3D3D;
+    color: var(--primary-gray-color);
     font-size: 16px;
     margin: 0 12px;
 }
 .focused{
-    color: #46A358;
+    color: var(--primary-green-color);
 }
 .registration-button-wrapper{
     display: flex;
@@ -1121,14 +1122,14 @@ footer .copyright-text{
 .password-input-wrapper{
     position: relative;
 }
-.password-input-wrapper::after{
-    content: url("../images/hide_password_icon.svg");
+.password-input-wrapper .icon-hide-passsword{
     position: absolute;
     display: inline;
     width: 20px;
     height: 20px;
     top: 13px;
     right: 13px;
+    cursor: pointer;
 }
 #register-button{
     font-family: "Cera-pro-bold";
@@ -1160,21 +1161,19 @@ footer .copyright-text{
     color: #727272;
 
     cursor: pointer;
+    transition: 0.4s ease border;
 }
-#continue-with-facebook-button::before{
-    content: url("../images/facebook_icon.svg");
+.continue-with-button:hover{
+    border-color: #3D3D3D;
+    color: var(--primary-gray-color);
+}
+.continue-with-button .icon-register-with{
     width: 20px;
     height: 20px;
-    margin-right: 4px;
-}
-#continue-with-google-button::before{
-    content: url("../images/google_icon.svg");
-    width: 20px;
-    height: 20px;
-    margin-right: 9px;
+    margin-right: 8px;
 }
 .modal-footer-line{
     margin-top: 40px;
     height: 10px;
-    background: #46A358;
+    background: var(--primary-green-color);
 }
