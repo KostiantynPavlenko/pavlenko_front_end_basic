@@ -1177,3 +1177,102 @@ footer .copyright-text{
     height: 10px;
     background: var(--primary-green-color);
 }
+
+/* -- STYLES FOR CHECKBOX -- */
+
+.checkbox-wrapper{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox input{
+    display: none;
+}
+
+.custom-checkbox p{
+    user-select: none;
+}
+
+.custom-checkbox a{
+    color: var(--primary-green-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.custom-checkbox .checkbox-icon{
+    position: relative;
+    min-width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-top: 3px;
+    border: 1px solid #878787;
+}
+
+.custom-checkbox .checkbox-icon::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-green-color);
+    display: none;
+}
+
+.custom-checkbox input:checked ~.checkbox-icon::after{
+    display: block;
+}
+
+/* -- STYLES FOR PRELOADER -- */
+
+.preloader-container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    transition: 0.4s ease;
+}
+
+.preloader-container .preloader{
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: var(--primary-gray-color);
+    border-top-color: var(--primary-green-color);
+    animation: rotate 0.6s linear infinite;
+    transition: 0.3s ease;
+}
+.preloader-container.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.preloader.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

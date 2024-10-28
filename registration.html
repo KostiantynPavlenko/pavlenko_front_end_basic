@@ -33,6 +33,18 @@
                     </svg>
                 </div>
                 <input type="password" placeholder="Confirm Password">
+                <div class="checkbox-wrapper">
+                    <label for="terms-conditions" class="custom-checkbox">
+                        <input type="checkbox" id="terms-conditions">
+                        <div class="checkbox-icon"></div>
+                        <p>I have read and agree to the <a href="#">Terms and conditions</a></p>
+                    </label>
+                    <label for="privacy-statement" class="custom-checkbox">
+                        <input type="checkbox" id="privacy-statement">
+                        <div class="checkbox-icon"></div>
+                        <p>I have read and accept the <a href="#">Privacy statement</a></p>
+                    </label>
+                </div>
 
                 <button id="register-button" class="green-button" type="submit">Register</button>
             </form>
@@ -52,5 +64,20 @@
         </div>
         <div class="modal-footer-line"></div>
     </div>
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+
+    <script>
+        window.onload = ()=> {
+            const preloaderContainer = document.querySelector('.preloader-container');
+            const preloader = document.querySelector('.preloader');
+
+            setTimeout(()=> {
+                preloaderContainer.classList.add('hidden');
+                preloader.classList.add('hidden');
+            }, 1600)
+        }
+    </script>
 </body>
 </html>
