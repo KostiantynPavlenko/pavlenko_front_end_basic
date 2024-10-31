@@ -15,10 +15,10 @@
                     <use href="./images/sprite.svg#icon-logo"></use>
                 </svg>
             </div>
-            <nav>
-                <a href="" class="nav-link">Home</a>
-                <a href="" class="nav-link">Shop</a>
-                <a href="" class="nav-link">
+            <nav class="desk-nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">
                     Plant Care
                     <ul class="nav__dropdown-menu">
                         <li>Drainage</li>
@@ -55,11 +55,55 @@
                         </svg>
                         <div class="counter">6</div>
                     </div>
+                    <div class="icon-wrapper">
+                        <div class="burger-menu-icon">
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
                 </div>
-                <a href="./registration.html" id="header-login-button" class="green-button">
-                <svg class="icon-login-button" xmlns="http://www.w3.org/2000/svg">
-                    <use href="./images/sprite.svg#icon-login"></use>
-                </svg>Login</a>
+                <div class="login-button-wrapper">
+                    <a href="./registration.html" id="header-login-button" class="green-button">
+                    <svg class="icon-login-button" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/sprite.svg#icon-login"></use>
+                    </svg>Login</a>
+                </div>
+            </div>
+            <div class="mobile-side-menu">
+                <nav>
+                    <a href="" class="nav-link">Home</a>
+                    <a href="" class="nav-link">Shop</a>
+                    <div class="nav-link">
+                        Plant Care
+                        <ul class="nav__dropdown-menu">
+                            <li>Drainage</li>
+                            <li>Fungicides</li>
+                            <li>Fertilizer</li>
+                            <li class="item-with-dropdown">Priming
+                                <svg class="item-with-dropdown__icon" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="./images/sprite.svg#icon-dropdown-menu-arrow"></use>
+                                </svg>
+                                <ul class="inner-dropdown-menu">
+                                    <li>Universal</li>
+                                    <li>For Ficus</li>
+                                    <li>For Cacti</li>
+                                    <li>For Citrus</li>
+                                    <li>For those in bloom</li>
+                                    <li>Fertilizer</li>
+                                    <li>For Orchids</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="nav-link">Blogs</a>
+                </nav>
+                <div class="login-button-wrapper">
+                    <a href="./registration.html" id="header-login-button" class="green-button">
+                    <svg class="icon-login-button" xmlns="http://www.w3.org/2000/svg">
+                        <use href="./images/sprite.svg#icon-login"></use>
+                    </svg>Login</a>
+                </div>
             </div>
         </header>
         <main>
@@ -143,6 +187,18 @@
                         <div class="sort-panel__sort-wrapper">
                             <p>Short by:</p>
                             <button class="sort-button">Default sorting <svg class="sort-button__icon" xmlns="http://www.w3.org/2000/svg"><use href="./images/sprite.svg#icon-sort-arrow-down"></use></svg></button>
+                        </div>
+                        <div class="mobile__sort-icons-wrapper">
+                            <button class="mobile__sort-button" id="filter-button">
+                                <svg class="mobile__sort-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="./images/sprite.svg#icon-filter"></use>
+                                </svg>
+                            </button> 
+                            <button class="mobile__sort-button" id="sort-button">                                       
+                                <svg class="mobile__sort-icons" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <use href="./images/sprite.svg#icon-sort"></use>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="shop-cards-wrapper">
@@ -661,5 +717,21 @@
             <p class="copyright-text">© 2021 GreenShop. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <script>
+        window.onload = ()=> {
+            const burgerMenuButton = document.querySelector('.burger-menu-icon');
+            const header = document.querySelector('header');
+            const asideSortPanel = document.querySelector('.aside__category-wrapper');
+            const filterButton = document.getElementById('filter-button');
+
+            burgerMenuButton.addEventListener('click', ()=> {
+                header.classList.toggle('menu-expanded');
+            })
+            filterButton.addEventListener('click', ()=> {
+                asideSortPanel.classList.toggle('expanded');
+            })
+        }
+    </script>
 </body>
 </html>
