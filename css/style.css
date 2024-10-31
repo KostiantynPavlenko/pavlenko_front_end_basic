@@ -1327,6 +1327,7 @@ footer .copyright-text{
         position: relative;
         flex-direction: column;
         margin-top: 16px;
+        padding-bottom: 12px;
     }
     .header__search-cart-buttons-wrapper .icon-wrapper:nth-child(3){
         display: block;
@@ -1513,7 +1514,7 @@ footer .copyright-text{
     }
 
     .information-section{
-        margin: 60px 0 80px 0;
+        margin: 60px 0 70px 0;
     }
 
     .information-section .info-cards-wrapper {
@@ -1559,7 +1560,7 @@ footer .copyright-text{
 
     .blog-posts-section .blog-posts-section__card-wrapper{
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 32px;
     }
 
     .blog-posts-section__card-wrapper .blog-card{
@@ -1576,6 +1577,7 @@ footer .copyright-text{
     .footer-newsletter{
         flex-direction: column;
         padding: 0;
+        row-gap: 20px;
     }
 
     .footer-newsletter__card-wrapper{
@@ -1618,6 +1620,10 @@ footer .copyright-text{
         row-gap: 24px;
         margin-top: 32px;
         padding: 0;
+    }
+    
+    .footer-details__navigation{
+        justify-content: space-between;
     }
     
     .footer-details .footer-details__navigation div{
