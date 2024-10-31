@@ -1508,6 +1508,16 @@ footer .copyright-text{
         width: 100%;
     }
 
+    .card-img{
+        max-height: 100%;
+    }
+    .card-img::before{
+        display: none;
+    }
+    .card-img img{
+        margin: 0;
+    }
+
     .pagination{
         margin-top: 48px;
         margin-bottom: 0;
