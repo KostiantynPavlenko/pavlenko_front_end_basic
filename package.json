@@ -1,0 +1,27 @@
+{
+  "name": "hlegal_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KostiantynPavlenko/pavlenko_front_end_basic.git"
+  },
+  "type": "module",
+  "author": "Kostiantyn Pavlenko",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sharp-responsive": "^0.4.1",
+    "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "browser-sync": "^3.0.3"
+  }
+}
