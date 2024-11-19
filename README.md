@@ -10,7 +10,7 @@ npm install
 ```
 3. Run project
 ```
-gulp build
+npx gulp build
 ```
 ```
 npm start
