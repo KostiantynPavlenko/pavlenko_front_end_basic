@@ -1,5 +1,9 @@
 @use 'variables' as vars;
 
+.header-tablet{
+    display: none;
+}
+
 h1{
     display: inline-block;
     color: transparent;
@@ -10,6 +14,7 @@ h1{
 .header{
     width: 100%;
     padding-top: 50px;
+    padding-bottom: 30px;
 
     .container{
         display: flex;
@@ -20,7 +25,7 @@ h1{
         display: flex;
     }
     &_logo-icon-container{
-        max-width: 130px;
+        width: 130px;
         max-height: 60px;
     }
     &_route-wrapper{
@@ -35,13 +40,13 @@ h1{
     .header-route-text{
         font-size: 2.25rem;
     }
-
     &-logo-icon{
         width: 100%;
     }
 
     .language-buttons{
         display: flex;
+
         button{
             font-family: 'Montserrat-bold';
             color: #FFFFFF;
@@ -49,6 +54,7 @@ h1{
             width: 33px;
             height: 24px;
             padding-left: 2px;
+            margin-right: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,7 +74,50 @@ h1{
             background: vars.$red-regular;
         }
     }
+    
+    .header-facebook-link{
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+    .header-facebook-icon{
+        width: 24px;
+        height: 24px;
+        fill: vars.$grey-text;
+        transition: 0.3s ease-in-out;
+    }
+    .header-facebook-icon:hover{
+        fill: vars.$red-regular;
+    }
+
+    .header-language-contacts{
+        display: flex;
+        align-items: center;
+
+        a{
+            font-family: 'Montserrat-bold';
+        }
+    }
+
+    .nav-menu{
+        margin-top: 16px;
+        display: flex;
+        justify-content: end;
+        column-gap: 14px;
+
+        a{
+            font-family: 'Montserrat-bold';
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        .close-button-container{
+            display: none;
+        }
+    }
+
 }
+
+/* -- HEADER LIGHT -- */
 
 .header.header-light{
     background: #FFFFFF;
@@ -91,7 +140,33 @@ h1{
             background: vars.$red-regular;
         }
     }
+
+    .header-language-contacts{
+        p{
+            color: vars.$grey-text;
+        }
+        a{
+            color: vars.$grey-text;
+        }
+        a:hover{
+            color: vars.$red-regular;
+        }
+    }
+
+    .nav-menu{
+        a:hover{
+            color: vars.$light-blue-regular;
+            border-color: vars.$light-blue-regular;
+        }
+        a.active{
+            color: vars.$red-regular;
+            border-color: vars.$red-regular;
+        }
+    }
 }
+
+/* -- HEADER DARK -- */
+
 .header.header-dark{
     background: vars.$dark-blue-regular;
 
@@ -110,7 +185,175 @@ h1{
             background: vars.$red-regular;
         }
     }
+
+    .header-language-contacts{
+
+        p{
+            color: #FFFFFF;
+        }
+        a{
+            color: #FFFFFF;
+        }
+        a:hover{
+            color: vars.$red-regular;
+        }
+    }
+
+    .nav-menu{
+        a{
+            color: #FFFFFF;
+        }
+        a:hover{
+            border-color: #FFFFFF;
+        }
+        a.active{
+            color: vars.$red-regular;
+            border-color: vars.$red-regular;
+        }
+    }
+}
+.header.header-dark.home-header{
+    position: absolute;
+    background: transparent;
+    z-index: 100;
 }
 
+@media screen and (max-width: 1024px) {
 
+    .header{
+        display: none;
+    }
+    .header.header-tablet{
+        display: block;
+
+        .header-menu{
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            .header-logo-router-wrapper{
+                display: flex;
+            }
+            .header-language-contacts,
+            .header_logo-wrapper{
+                width: 88%;
+                margin: 0 auto;
+            }
+            .nav-menu{
+                width: 88%;
+                margin: 0 auto;
+                justify-content: start;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .header{
+        &_logo-icon-container{
+            width: 76px;
+            max-height: 32px;
+        }
+        .header-route-text{
+            font-size: 1.25rem;
+        }
+    }
+
+    .header.header-tablet{
+        padding-top: 0;
+
+        .header_slash-icon-container{
+            height: 26px;
+        }
+        .header-menu{
+            width: 100%;
+
+            .header-language-contacts{
+                width: 100%;
+                padding: 10px 15px;
+                justify-content: space-between;
+                background: #F5F5FA33;
+            }
+            .header_logo-wrapper.tablet{
+                align-items: center;
+                justify-content: space-between;
+            }
+            .circle-divider{
+                display: none;
+            }
+            .header-adress{
+                display: none;
+            }
+            .header-facebook-icon, .header-facebook-link{
+                display: none;
+            }
+            .nav-menu{
+                width: 95%;
+                position: fixed;
+                left: 50%;
+                transform: translate(-50%, 190%);
+                bottom: 0;
+                flex-direction: column;
+                row-gap: 15px;
+                text-align: center;
+                padding: 12px;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                background: #FFFFFF;
+                transition: 0.6s ease-out;
+
+                .close-button-container{
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .cross-button-icon{
+                    display: block;
+                    width: 32px;
+                    height: 32px;
+                    cursor: pointer;
+                }
+
+                a{
+                    background: vars.$grey-bg;
+                    color: vars.$light-blue-regular;
+                    padding: 8px 0;
+                    border: none;
+                    border-radius: 12px;
+                }
+                a.active{
+                    color: vars.$red-regular;
+                }
+                a:hover{
+                    background: vars.$grey-separator;
+                }
+            }
+            .nav-menu.visible{
+                transform: translate(-50%, 0);
+            }
+        }
+        .burger-menu-button{
+            padding: 9px 7px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+
+            .burger-row{
+                height: 2px;
+                width: 18px;
+                background: #FFFFFF;
+            }
+        }
+        .burger-menu-button.active{
+            background: vars.$dark-blue-soft;
+        }
+    }
+
+
+}
 

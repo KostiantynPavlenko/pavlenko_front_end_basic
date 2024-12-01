@@ -1,0 +1,156 @@
+.cooperate-companies{
+    margin-bottom: 60px;
+    .container{
+        width: 90%;
+    }
+    .title{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+}
+.companies-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+
+    .company-item{
+        background: red;
+        width: 25%;
+        height: 120px;
+        padding: 34px;
+
+        .company-img{
+            height: 100%;
+            display: block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .first{
+            background-image: url('../../dist/images/clients-imgs/hillel.webp');
+        }
+        .second{
+            background-image: url('../../dist/images/clients-imgs/wannabiz.webp');
+        }
+        .third{
+            background-image: url('../../dist/images/clients-imgs/tapgerine.webp');
+        }
+        .fourth{
+            background-image: url('../../dist/images/clients-imgs/3dlook.webp');
+        }
+        .fifth{
+            background-image: url('../../dist/images/clients-imgs/orangear.webp');
+        }
+        .sixth{
+            background-image: url('../../dist/images/clients-imgs/adtelligent.webp');
+        }
+        .seventh{
+            background-image: url('../../dist/images/clients-imgs/clickky.webp');
+        }
+        .eighth{
+            background-image: url('../../dist/images/clients-imgs/eco-leasing.webp');
+        }
+        .ninth{
+            background-image: url('../../dist/images/clients-imgs/ingratek.webp');
+        }
+        .tenth{
+            background-image: url('../../dist/images/clients-imgs/city-par.webp');
+        }
+        .eleventh{
+            background-image: url('../../dist/images/clients-imgs/artprint.webp');
+        }
+        .twelfth{
+            background-image: url('../../dist/images/clients-imgs/ultimatecard.webp');
+        }
+    }
+    .blue-hillel{
+        background: #1C4280;
+    }
+    .blue-wannabiz{
+        background: #143646;
+        padding: 40px;
+    }
+    .orange-targerin{
+        background: #F48B30;
+    }
+    .orange-orangear{
+        background: #FD9339;
+    }
+    .purple-3dlook{
+        background: #9E4DC3;
+        padding: 36px;
+    }
+    .grey-adtelligent{
+        background: #E2E2E4;
+    }
+    .red-clickky{
+        background: #C71C36;
+    }
+    .light-blue-eco{
+        background: #DCF3F9;
+    }
+    .grey-infratek{
+        background: #EAEAEA;
+        padding: 26px;
+        border-bottom-left-radius: 12px;
+    }
+    .blue-city-park{
+        background: #282240;
+        padding: 40px;
+    }
+    .blue-art-print{
+        background: #1D4568;
+    }
+    .black-ultimate-card{
+        background: #000000;
+        padding: 6px;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .cooperate-companies{
+        margin-bottom: 0;
+        .container{
+            width: 100%;
+        }
+    }
+    .companies-wrapper{
+        border-radius: none;
+        overflow: visible;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .cooperate-companies{
+        .container{
+            width: 100%;
+        }
+    }
+    .companies-wrapper{
+        flex-wrap: wrap;
+        .company-item{
+            width: 33.3333%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+
+    .companies-wrapper{
+        flex-wrap: wrap;
+        
+        .company-item{
+            width: 100%;
+        }
+        .company-item:nth-child(n+7){
+            display: none;
+        }
+    }
+}

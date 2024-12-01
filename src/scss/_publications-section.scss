@@ -1,0 +1,97 @@
+@use 'variables' as vars;
+
+.publications-section{
+    background: vars.$grey-bg;
+    padding-top: 30px;
+    .publications-section-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .title{
+        display: inline-block;
+        background: vars.$gradient-red-text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+    }
+    .publications-card-wrapper{
+        display: flex;
+        column-gap: 30px;
+    }
+    .publication-card{
+        display: flex;
+        flex-direction: column;
+        width: 32.289%;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+        .card-details-wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            row-gap: 15px;
+            padding: 30px;
+            background: #FFFFFF;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .publication-title{
+            font-family: 'Montserrat-bold';
+            color: vars.$light-blue-regular;
+        }
+        .publication-date{
+            font-family: 'Montserrat-bold';
+            font-size: 0.75rem;
+            color: vars.$grey-text;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .publication-horizontal-divider{
+            width: 100%;
+            height: 4px;
+            background: vars.$grey-separator;
+        }
+        .publication-description{
+            font-size: 0.875rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .publications-section{
+        .publication-card{
+            width: 33.6%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .publications-section{
+        .publications-card-wrapper{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+        .publication-card{
+            width: 46.8%;
+        }
+        .publication-card:nth-child(3){
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .publications-section{
+        .publication-card{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use 'variables' as vars;
+
+footer{
+    width: 100%;
+    padding: 30px 0;
+    background: vars.$grey-bg;
+
+    a{
+        font-family: 'Montserrat-bold';
+    }
+    .circle-divider{
+        margin: 0 10px;
+        background: vars.$grey-text;
+    }
+    .footer-separator{
+        height: 2px;
+        background: vars.$grey-separator;
+        margin-bottom: 30px;
+    }
+
+    .map-address-copyright-wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        .map-address{
+            display: flex;
+            align-items: center;
+
+            .on-map-link{
+                font-size: 0.75rem;
+            }
+        }
+        .copyright-text{
+            color: vars.$grey-text;
+        }
+    }
+
+    .footer-contacts{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        .footer-facebook-link{
+            display: block;
+            width: 38px;
+            height: 38px;
+        }
+        .footer-facebook-icon{
+            width: 38px;
+            height: 38px;
+            fill: vars.$light-blue-regular;
+            transition: 0.3s ease-in-out;
+        }
+        .footer-facebook-icon:hover{
+            fill: vars.$red-regular;
+        }
+        .footer-phone-link{
+            color: vars.$dark-blue-alt;
+        }
+    }
+
+    .copyright-wrapper.mobile{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    footer{
+        .circle-divider{
+            display: none;
+        }
+        .map-address-copyright-wrapper{
+            justify-content: center;
+            .copyright-wrapper{
+                display: none;
+            }
+        }
+        .map-address{
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        .footer-contacts{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+        }
+        .copyright-wrapper.mobile{
+            display: block;
+            margin-top: 30px;
+            .copyright-text{
+                color: vars.$grey-text;
+                text-align: center;
+            }
+        }
+    }
+
+
+}

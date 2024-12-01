@@ -1,0 +1,107 @@
+@use 'variables' as vars;
+
+.team-information{
+    margin-bottom: 60px;
+}
+
+.team-slider{
+
+    /*-- SLICK STYLES --*/
+    .slick-prev{
+        display: none !important;
+    }
+    .slick-next{
+        display: none !important;
+    }
+    ul.slick-dots{
+        display: flex !important;
+        justify-content: center;
+        margin-top: 30px;
+        column-gap: 15px;
+
+        li{
+            list-style-type: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: vars.$light-blue-regular;
+            opacity: 20%;
+        }
+        li.slick-active{
+            opacity: 1;
+        }
+
+        li button{
+            display: none;
+        }
+    }
+
+    .team-slide-wrapper{
+        display: flex;
+        margin: 0 2px;
+    }
+    .img-wrapper{
+        min-width: 400px;
+        .img{
+            display: block;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        .first-person{
+            background-image: url('../../dist/images/team_first_img.webp');
+        }
+        .second-person{
+            background-image: url('../../dist/images/team_second_img.webp');
+        }
+        .third-person{
+            background-image: url('../../dist/images/team_third_img.webp');
+        }
+    }
+    .team-member-description{
+        padding: 30px;
+        background: vars.$grey-bg;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+
+        .title{
+            background: vars.$gradient-red-text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+        .person{
+            font-family: 'Montserrat-bold';
+            color: vars.$grey-text;
+            margin-bottom: 6px;
+        }
+        .position{
+            font-size: 0.875rem;
+            line-height: 22px;
+            color: vars.$grey-text;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .team-slider{
+        .team-slide-wrapper{
+            flex-direction: column;
+        }
+        .img-wrapper{
+            min-width: 100%;
+            height: 500px;
+            .img{
+                border-top-right-radius: 12px;
+                border-bottom-left-radius: 0;
+                
+            }
+        }
+    }
+
+}
