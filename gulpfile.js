@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
+import terser from 'gulp-terser';
 import browserSync from 'browser-sync';
 import gulpSharp from 'gulp-sharp-responsive';
 import {deleteSync} from 'del';
@@ -26,6 +27,13 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('./dist/css'))
 });
 
+gulp.task('scripts' , function() {
+    return gulp.src('src/scripts/**/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('./dist/scripts'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('copy-svg', function(){
     return gulp.src('src/images/**/*.svg', {encoding: false})
     .pipe(gulp.dest('dist/images'));
@@ -48,7 +56,7 @@ gulp.task('img-webp', function(){
 
 gulp.task('build-images', gulp.series('copy-svg', 'img-webp'));
 
-gulp.task('build', gulp.series('clean', 'build-images', 'styles'));
+gulp.task('build', gulp.series('clean', 'build-images', 'styles', 'scripts'));
 
 gulp.task('serve', function() {
 
@@ -59,6 +67,7 @@ gulp.task('serve', function() {
     });
 
     gulp.watch('src/scss/**/*.scss', gulp.series('styles'));
+    gulp.watch('src/scripts/**/*.js', gulp.series('scripts'));
     gulp.watch('src/images/**/*.{jpeg,jpg,png}', gulp.series('img-webp'));
     gulp.watch('src/images/**/*.svg', gulp.series('copy-svg'));
     gulp.watch('./index.html').on('change', browserSync.reload);

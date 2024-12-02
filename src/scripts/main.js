@@ -4,17 +4,14 @@ window.onload = ()=> {
     const mobileNavMenu = document.querySelector('.nav-menu.mobile');
     
     burgerMenuButton.addEventListener('click', () => {
-        console.log('hovered button');
         mobileNavMenu.classList.toggle('visible');
         burgerMenuButton.classList.toggle('active')
     });
     closeBurgerMenuButton.addEventListener('click', ()=> {
-        mobileNavMenu.classList.remove('visible')
+        mobileNavMenu.classList.remove('visible');
+        burgerMenuButton.classList.remove('active');
     })
 };
-
-
-
 
 $('.team-slider').slick({
     dots: true,

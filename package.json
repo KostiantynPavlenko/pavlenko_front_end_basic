@@ -19,6 +19,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.1.0",
     "gulp-sharp-responsive": "^0.4.1",
+    "gulp-terser": "^2.1.0",
     "sass": "^1.81.0"
   },
   "dependencies": {
