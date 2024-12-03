@@ -23,10 +23,10 @@ h1{
     font-size: 2.375rem;
 }
 h2{
-    font-size: 1.875rem;
+    font-size: 1.875rem; // 30px
 }
 h3{
-    font-size: 1.375rem;
+    font-size: 1.375rem; // 22px
 }
 h4{
     font-size: 1rem;
@@ -59,7 +59,7 @@ a:hover{
     color: vars.$red-regular;
 }
 ul, ol{
-    list-style-position: inside;
+    list-style: none;
 }
 
 ol ::marker, ul ::marker{

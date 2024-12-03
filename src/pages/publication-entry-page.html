@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../dist/css/styles.css">
-    <title>Hlegal - publications</title>
+    <title>Hlegal - publications entry page</title>
 </head>
 <body>
     <!--  HEADER  -->
@@ -49,7 +49,7 @@
                     <a href="#">about us</a>
                     <a href="#">services</a>
                     <a href="#">team</a>
-                    <a href="./publications.html" class="active">publications</a>
+                    <a href="/src/pages/publications.html" class="active">publications</a>
                     <a href="#">contact</a>
                 </nav>
             </div>
@@ -108,25 +108,72 @@
                 <a href="#">about us</a>
                 <a href="#">services</a>
                 <a href="#">team</a>
-                <a href="./publications.html" class="active">publications</a>
+                <a href="/src/pages/publications.html" class="active">publications</a>
                 <a href="#">contact</a>
             </nav>
         </div>
     </div>
 
-    <section class="publications-section publication-page">
+    <main class="publications-section entry-page">
         <div class="container">
-            <div class="publications-buttons">
-                <div class="buttons-wrapper">
-                    <button class="news-button active">news</button>
-                    <button class="articles-button">articles</button>
+            <div class="hero-img-container">
+                <div class="hero-img"></div>
+            </div>
+            <h2>Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</h2>
+            <p class="publication-date">September 29</p>
+            <div class="publication-horizontal-divider"></div>
+            <p>On January 21, the French National Data Protection Commission (CNIL) announced on its website that it had fined Google for violating the EU's General Data Protection Regulation (GDPR). It took six months for the EU countries to make a quality level-up in the amount of fines for non-compliance with this standard. Prior to that, the fine was mainly € 20,000-30,000, with the largest fine amounting to € 400,000 and related to a hospital in Portugal. But this precedent is interesting not so much the amount of the fine as the rigidity of the regulator's approaches. Denis Beregovyi, Axon Partners, explains why, especially for Mind.<br><br>For what? The group complaints against Google arrived at CNIL on the same day that the GDPR came into force. The complainants reported that Google processed users' personal data without due cause, in particular to create personalized advertising offers.</p>
+            <h1>To the attention of Ukrainian security officers: the inspection was conducted online, without searches, without seizure of servers or other visible interference for business. And so it was possible.</h1>
+            <h3>According to the results of CNIL inspections revealed violations of two requirements of the GDPR:</h3>
+            <ol>
+                <li>Transparency and awareness of users about the processing of personal data.</li>
+                <li>Lack of proper user consent for the processing of personal data for the purpose of personalizing advertising.</li>
+            </ol>
+            <p>In the case of personalization of advertising, Google was sure to obtain the consent of users, because, firstly, when creating Google accounts, the user agrees to the Privacy Policy, and secondly, Google has a section "Ads personalization", where you can disable this feature.</p>
+            <div class="second-img-container">
+                <img src="../../dist/images/publications-imgs/illustration-publication-img.webp" width="640" alt="illustration-publication-img">
+                <p class="under-img-label">This is what the ad personalization settings window in your Google Account looks like</p>
+            </div>
+            <p>However, CNIL does not think so, because the information about the personalization of advertising is not clear enough to users. As an example, the Commission claims that the relevant "Personalization" window does not contain information on the full range of Google services that collect and process personal data for this purpose (YouTube, Google search, Play Store, Google pictures, Gmail, etc.). ), and therefore, the user cannot realize to what extent the data is used and how exactly they can be combined.</p>
+            <h3>So, let's walk through the text of the CNIL decision</h3>
+            <p class="last-p">Why France and not Ireland. Google operates in Europe through a legal entity in Ireland. But the case was not initiated by the Irish, but by the French regulator. This is why it happened.<br><br>If data processing decisions are taken anywhere outside the EU, there is a one-stop mechanism - where the complaint is received, the body considers it. Because Google's data processing center is located in the United States and the complaint was first received in France, CNIL considered it.</p>
+            <div class="publication-horizontal-divider"></div>
+            <div class="contact-icons-wrapper">
+                <a href="" class="post-icon-wrapper">
+                    <svg class="post-contact-icon" fill="none" viewBox="0 0 24 24">
+                        <use href="../../dist/images/sprite.svg#facebook-post-icon"></use>
+                    </svg>
+                </a>
+                <a href="" class="post-icon-wrapper">
+                    <svg class="post-contact-icon" fill="none" viewBox="0 0 24 24">
+                        <use href="../../dist/images/sprite.svg#linkedIn-post-icon"></use>
+                    </svg>
+                </a>
+                <a href="" class="post-icon-wrapper">
+                    <svg class="post-contact-icon" fill="none" viewBox="0 0 24 24">
+                        <use href="../../dist/images/sprite.svg#telegram-post-icon"></use>
+                     </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section class="publications-section">
+        <div class="container">
+            <div class="publications-section-header">
+                <div class="link-with-arrow-wrapper">
+                    <a href="./publications.html" class="link-with-arrow">Publications<svg class="arrow-right-link-icon" fill="none" viewBox="0 0 12 13">
+                        <use href="../../dist/images/sprite.svg#arrow-right-link-icon"></use>
+                    </svg>
+                    </a>
                 </div>
+                <p class="h1 title">Recommended</p>
             </div>
             <div class="publications-card-wrapper">
                 <div class="publication-card">
                     <img src="../../dist/images/publications-imgs/first-publication-img.webp" alt="first-publication-img">
                     <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Equity associate</a>
+                        <a href="#" class="publication-title">Equity associate</a>
                         <p class="publication-date">April 22</p>
                         <div class="publication-horizontal-divider"></div>
                         <p class="publication-description">I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…</p>
@@ -135,7 +182,7 @@
                 <div class="publication-card">
                     <img src="../../dist/images/publications-imgs/second-publication-img.webp" alt="second-publication-img">
                     <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</a>
+                        <a href="#" class="publication-title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</a>
                         <p class="publication-date">September 29</p>
                         <div class="publication-horizontal-divider"></div>
                         <p class="publication-description">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
@@ -144,41 +191,12 @@
                 <div class="publication-card">
                     <img src="../../dist/images/publications-imgs/third-publication-img.webp" alt="third-publication-img">
                     <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Millennial Testament</a>
+                        <a href="#" class="publication-title">Millennial Testament</a>
                         <p class="publication-date">August 19</p>
                         <div class="publication-horizontal-divider"></div>
                         <p class="publication-description">What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
                     </div>
                 </div>
-                <div class="publication-card">
-                    <img src="../../dist/images/publications-imgs/fourth-publication-img.webp" alt="fourth-publication-img">
-                    <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Language Law: How to Make Your Website Relevant</a>
-                        <p class="publication-date">August 19</p>
-                        <div class="publication-horizontal-divider"></div>
-                        <p class="publication-description">Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…</p>
-                    </div>
-                </div>
-                <div class="publication-card">
-                    <img src="../../dist/images/publications-imgs/fifth-publication-img.webp" alt="fifth-publication-img">
-                    <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Reimbursement of the child's tuition fees in kindergarten and school</a>
-                        <p class="publication-date">February 5, 2018</p>
-                        <div class="publication-horizontal-divider"></div>
-                        <p class="publication-description">What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine. From now on, parents who receive an official…</p>
-                    </div>
-                </div>
-                <div class="publication-card">
-                    <div class="card-details-wrapper">
-                        <a href="./publication-entry-page.html" class="publication-title">Currency control is dead, long live currency control!</a>
-                        <p class="publication-date">June 14, 2018</p>
-                        <div class="publication-horizontal-divider"></div>
-                        <p class="publication-description">Experts hold conferences, round tables and other events on "liberalization of currency legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".</p>
-                    </div>
-                </div>
-            </div>
-            <div class="more-publications-button-wrapper">
-                <button class="form-button">More publications</button>
             </div>
         </div>
     </section>

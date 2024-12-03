@@ -65,6 +65,38 @@ footer{
 
 }
 
+@media screen and (max-width: 800px) {
+
+    footer{
+        .map-address-copyright-wrapper{
+            max-width: 398px;
+            margin: 0 auto 20px auto;
+            justify-content: start;
+            .copyright-wrapper{
+                display: none;
+            }
+        }
+        .map-address{
+            row-gap: 10px;
+        }
+        .footer-contacts{
+            max-width: 398px;
+            margin: 0 auto;
+            row-gap: 10px;
+        }
+        .copyright-wrapper.mobile{
+            display: block;
+            margin-top: 30px;
+            .copyright-text{
+                color: vars.$grey-text;
+                text-align: center;
+            }
+        }
+    }
+
+
+}
+
 @media screen and (max-width: 600px) {
 
     footer{
