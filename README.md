@@ -2,7 +2,7 @@
 
 1. Clone repo
 ```
-git clone https://github.com/KostiantynPavlenko/pavlenko_front_end_basic/tree/pavlenko_homework/hlegal
+git clone https://github.com/KostiantynPavlenko/pavlenko_front_end_basic.git
 ```
 2. Install packages
 ```
